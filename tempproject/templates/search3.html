@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="{% url 'search3' %}">
+        <label for="q3">Enter name</label>
+        <input type="text" name="q3" id="q3">
+        <button type="submit">Search</button>
+    </form>
+    
+    
+    
+      
+    {% block content %}
+    <h1>Search</h1>
+    {% if result %}
+    <p>Player Name : {{result.playername}}</p>
+    <p>Jersey number: {{result.jerseynumber}}</p>
+    <p>Country: {{result.country}}</p>
+    <p>Team: {{result.team.team_name}}</p>
+    <p>Matches: {{result.playerstats.matches}}</p>
+    <p>Runs scored: {{result.playerstats.runs}}</p>
+    <p>Wickets taken: {{result.playerstats.wickets}}</p>
+
+    
+    {% endif %}
+    {% endblock %}
+    </body>
+    </html>
+    
+    
+</body>
+</html>

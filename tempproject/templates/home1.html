@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is sports page</h1>
+    {% block content %}
+    <h1>REsults</h1>
+    {% for i in res %}
+    <p>Name : {{i.playername}}</p>
+    <p>jersey: {{i.jerseynumber}}</p>
+    <p>Team: {{i.team.team_name}}</p>
+    
+    
+    {% endfor %}
+    {% endblock %}
+
+
+
+</body>
+</html>

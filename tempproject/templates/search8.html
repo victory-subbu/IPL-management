@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="{% url 'search8' %}">
+        <label for="q9">Enter Player name</label>
+        <input type="text" name="q9" id="q9">
+        <label for="q10">Enter New team name</label>
+        <input type="text" name="q10" id="q10">
+        <button type="submit">Search</button>
+    </form>
+    
+    
+    
+      
+    {% block content %}
+    <h1>Search</h1>
+    {% if result %}
+    <p>Player name : {{result.playername}}</p>
+    <p>Player Team: {{result.team.team_name}}</p>
+    
+    
+    {% endif %}
+    {% endblock %}
+    </body>
+    </html>
+    
+    
+</body>
+</html>

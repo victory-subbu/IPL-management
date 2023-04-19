@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get" action="{% url 'search1' %}">
+        <label for="q1">Enter country name</label>
+        <input type="text" name="q1" id="q1">
+        <button type="submit">Search</button>
+    </form>
+    
+    
+    
+      
+    {% block content %}
+    <h1>Search</h1>
+    {% for i in result %}
+    <p>Id : {{i.id}}</p>
+    <p>Name: {{i.playername}}</p>
+    <p>Jersey number: {{i.jerseynumber}}</p>
+    
+    
+    {% endfor %}
+    {% endblock %}
+    </body>
+    </html>
+    
+    
+</body>
+</html>
